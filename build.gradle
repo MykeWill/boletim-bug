@@ -9,6 +9,9 @@ repositories {
 
 dependencies {
     implementation 'org.apache.groovy:groovy:4.0.24'
+
+    testImplementation 'org.spockframework:spock-core:2.4-groovy-4.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 application {
@@ -22,4 +25,8 @@ tasks.withType(GroovyCompile).configureEach {
 
 tasks.named('run') {
     jvmArgs '-Dfile.encoding=UTF-8', '-Dstdout.encoding=UTF-8'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
 }
