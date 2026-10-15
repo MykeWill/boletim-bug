@@ -91,3 +91,11 @@ O loop começava no índice 1 e, por isso, ignorava a primeira nota de cada
 aluno ao somar. O índice inicial foi alterado de 1 para 0 para incluir todas
 as notas no cálculo. Como resultado, as médias de todos os alunos estavam
 incorretas antes da correção.
+
+## Sobre o bug
+
+### Bug 2 — Corte de recuperação errado
+
+A constante `MEDIA_RECUPERACAO` estava definida como 6.5, mas o corte correto
+é 5.0. O valor foi ajustado para 5.0. Antes da correção, alunos com média
+entre 5.0 e 6.5 eram classificados incorretamente como Reprovado.
