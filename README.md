@@ -82,3 +82,12 @@ primeiro acerto.
 - [ ] A média de todos os alunos está igual à esperada
 - [ ] A situação de todos os alunos está igual à esperada
 - [ ] Consigo explicar, com minhas palavras, cada bug que corrigi
+
+## Sobre o bug
+
+### Bug 1 — Média ignorava a primeira nota
+
+O loop começava no índice 1 e, por isso, ignorava a primeira nota de cada
+aluno ao somar. O índice inicial foi alterado de 1 para 0 para incluir todas
+as notas no cálculo. Como resultado, as médias de todos os alunos estavam
+incorretas antes da correção.
