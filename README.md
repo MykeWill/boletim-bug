@@ -99,3 +99,12 @@ incorretas antes da correção.
 A constante `MEDIA_RECUPERACAO` estava definida como 6.5, mas o corte correto
 é 5.0. O valor foi ajustado para 5.0. Antes da correção, alunos com média
 entre 5.0 e 6.5 eram classificados incorretamente como Reprovado.
+
+## Sobre o bug
+
+### Bug 3 — Aluno com média 7,0 não era aprovado
+
+O método `situacao` usava o operador `>` na verificação de aprovação, exigindo
+uma média estritamente maior que 7.0. O operador foi trocado por `>=` para
+aprovar também quem alcança exatamente 7.0. Antes da correção, esses alunos
+eram classificados incorretamente como Recuperação.
